@@ -60,6 +60,14 @@ typings/
 # next.js build output
 .next
 
+#files
+css/style.css.map
+css/style.prefixed.css
+css/style.prefixed.css.map
+
+
+
+
 #directories
 Fixed_project_of_karol_D¹browski_3.3_24-01-2017
 sass

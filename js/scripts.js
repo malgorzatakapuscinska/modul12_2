@@ -4,15 +4,17 @@ var quoteUrl = "https://quotesondesign.com/wp-json/posts?filter[orderby]=rand&fi
 
 function getQuote(){
 	$.getJSON(prefix + quoteUrl, createTweet);
-	 $.ajaxSetup({ cache: false });
+	$.ajaxSetup({ cache: false });
 }
 
 function createTweet(input) {
     var data = input[0];
 
     var quoteText = $(data.content).text().trim();
+    console.log(data.content);
+    console.log(quoteText);
     var quoteAuthor = data.title;
-
+    console.log(quoteAuthor);
     if (!quoteAuthor.length) {
         quoteAuthor = "Unknown author";
     }
@@ -22,6 +24,7 @@ function createTweet(input) {
         getQuote();
     } else {
         var tweet = tweetLink + encodeURIComponent(tweetText);
+        console.log(tweet);
         $('.quote').text(quoteText);
         $('.author').text("Author: " + quoteAuthor);
         $('.tweet').attr('href', tweet);

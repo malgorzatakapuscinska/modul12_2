@@ -1,5 +1,5 @@
 {
-    "name": "modul9_7",
+    "name": "modul12_2",
     "version": "1.0.0",
     "description": "",
     "main": "index.js",
@@ -37,3 +37,4 @@
         "rimraf": "^2.6.2"
     }
 }
+

@@ -1,25 +1,19 @@
-body {
-  background-color: #55acee;
-  color: white;
-  text-align: center;
-}
+body { background-color: #55acee; color: white; text-align: center; box-sizing: border-box; margin: 0; }
 
-.btn-primary, .tweet {
-  display: block;
-  background-color: #4bb0fa;
-  border: 1px solid #2aa3fb;
-  margin: 15px auto;
-}
+h1, .h1 { padding: 0; margin: 0; }
 
-.btn-primary:hover, .tweet:hover, .btn-primary:visited, .tweet:visited {
-  background-color: #4bb0fa;
-  color: white;
-}
+.page-header { padding-bottom: 9px; margin: 0; border-bottom: 1px solid #eee; }
 
-.tweet {
-  width: 100px;
-  border-radius: 6px;
-  padding: 10px;
-}
+.page-header h1 { margin: 0; padding: 20px 0; }
 
-/*# sourceMappingURL=style.css.map */
+.jumbotron { background-color: #4bb0fa; width: 100%; min-height: calc(100vh - 89px); margin: 0; }
+
+.box { max-width: 70%; margin: 0 auto; }
+
+.btn-primary, .tweet { display: block; background-color: #4bb0fa; border: 1px solid white; margin: 20px auto; }
+
+.btn-primary:hover, .tweet:hover, .btn-primary:visited, .tweet:visited, .btn-primary:active, .tweet:active, .btn-primary:link .btn-primary:focus, .tweet:link .btn-primary:focus, .btn-primary:link .tweet:focus, .tweet:link .tweet:focus { background-color: #4bb0fa; border: 1px solid white; color: white; }
+
+.tweet { width: 100px; border-radius: 6px; padding: 10px; }
+
+.tweet:hover, .tweet:visited, .tweet:active, .tweet:link { text-decoration: none; color: white; }
