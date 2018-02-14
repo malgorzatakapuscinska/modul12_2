@@ -3,11 +3,26 @@ var tweetLink = "https://twitter.com/intent/tweet?text=";
 var quoteUrl = "https://quotesondesign.com/wp-json/posts?filter[orderby]=rand&filter[posts_per_page]=1";
 
 function getQuote(){
-	$.getJSON(prefix + quoteUrl, createTweet);
+	$.ajax({
+		type: "GET",
+		url: prefix + quoteUrl,
+		beforeSend: function(){
+			$('h2').empty();
+			$('<i class="fas fa-spinner fa-spin"></i>').appendTo($('h2'));
+			/*$('h2').text("Downloading quote, please wait :-)");*/
+			$('h3').empty();
+		},
+		success: createTweet,
+		complete: function(){
+
+		}
+	});
 	$.ajaxSetup({ cache: false });
 }
 
 function createTweet(input) {
+	$('h2').empty();
+	$('h3').empty();
     var data = input[0];
 
     var quoteText = $(data.content).text().trim();
